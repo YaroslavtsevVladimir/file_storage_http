@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Create a service file
+if [[ ! -e /etc/systemd/system/file_storage.service ]];
+then
+  sudo cp file_storage.service /etc/systemd/system/
+fi
+
+case "$1" in
+start)
+  sudo systemctl daemon-reload
+  sudo systemctl start file_storage
+  echo "Server is running"
+  ;;
+stop)
+  sudo systemctl stop file_storage
+  echo "Server has been stopped"
+  ;;
+status)
+  sudo systemctl status file_storage
+esac
+
+exit 0

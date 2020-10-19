@@ -1,6 +1,6 @@
 .idea
 .vscode
 venv
-__pycahce__/
+__pycache__/
 nohup.out
 log.txt

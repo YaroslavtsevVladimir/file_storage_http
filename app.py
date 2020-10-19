@@ -62,8 +62,8 @@ def save_file(file):
 
 def get_hash(file):
     current_time = datetime.datetime.now().strftime("%d/%m/%y %H:%M:%S")
-    filename = bytearray(
-        f'{current_time}{secure_filename(file.filename)}', encoding='utf-8')
+    filename = bytearray(f'{current_time}{secure_filename(file.filename)}', encoding='utf-8')
+
     return hashlib.md5(filename).hexdigest()
 
 

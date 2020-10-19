@@ -1,0 +1,12 @@
+[Unit]
+Description=Local file storage with HTTP API
+After=network.target
+
+[Service]
+User=<Chuck Norris>
+WorkingDirectory=<path to project>
+ExecStart=<path to project/venv/bin/flask run>
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
